@@ -9,6 +9,7 @@ let goodWords = document.querySelector(".good-words");
 let stopWords = document.querySelector(".stop-words");
 let allWoStopWords = document.querySelector(".all-wo-stop-words");
 let tonPlace = document.querySelector(".ton");
+let tonPlaceNumber = document.querySelector(".ton-number");
 
 let take_result = document.querySelector(".take_result");
 
@@ -32,10 +33,11 @@ take_result.addEventListener("click", function(){
     goodWords.innerText = good_Words;
     stopWords.innerText = stop_Words;
     allWoStopWords.innerText = all_Wo_Stop_Words;
+    tonPlaceNumber.innerText = "(" + (Math.round(ton * 100) / 100).toFixed(2) + ")";
 
     if(ton > 0) {
-        tonPlace.innerText = "положительный";
-    } else tonPlace.innerText = "отрицательный";
+        tonPlace.innerText = "Тон текста положителен";
+    } else tonPlace.innerText = "Тон текста отрицателен";
 });
 
 function countWords(str) { //считаем все слова в тексте
