@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Текстовый анализатор</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="mobile">
+        <h2>Не, не, с мобилы не получится, нужен комп!</h2>
+    </div>
+    <main>
+        <textarea class="text" name="" id="" cols="30" rows="10"></textarea>
+        <button class="take_result">Посчитать</button>
+    </main>
+    <aside>
+        <p>Количество слов в тексте: <span class="all-words">0</span></p>
+        <p>Количество негативных слов: <span class="bad-words">0</span></p>
+        <p>Количество позитивных слов: <span class="good-words">0</span></p>
+        <p>Количество слов-исключений: <span class="stop-words">0</span></p>
+        <p>Количество слов без слов-исключений: <span class="all-wo-stop-words">0</span></p>
+        <p>Тон текста: <span class="ton">?</span></p>
+    </aside>
+    <script src="vocabulary.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
