@@ -34,8 +34,8 @@ take_result.addEventListener("click", function(){
     allWoStopWords.innerText = all_Wo_Stop_Words;
 
     if(ton > 0) {
-        tonPlace.innerText = "Тон текста положителен";
-    } else tonPlace.innerText = "Тон текста отрицателен";
+        tonPlace.innerText = "положительный";
+    } else tonPlace.innerText = "отрицательный";
 });
 
 function countWords(str) { //считаем все слова в тексте
