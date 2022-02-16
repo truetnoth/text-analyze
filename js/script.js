@@ -41,7 +41,7 @@ take_result.addEventListener("click", function(){
 });
 
 function countWords(str) { //считаем все слова в тексте
-    return str.trim().split(/\s+/gi);
+    return str.trim().match(/\b\S+\b/gi);
 };
 
 function countBadWords(str) { // считаем все негативные слова в тексте
