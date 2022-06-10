@@ -23,23 +23,30 @@ const countGoodWords = (str) => { // считаем все позитивные 
     return goodWordsCounted_1.length
 };
 
-const countBadWords = (str) => { // считаем все негативные слова в тексте
-    const badWords = {
-		counted_1: null,
-		counted_2: null,
-		counted_3: null,
-	  };
+const countBadWords = (str) => { // считаем все плохие слова в тексте
+    let badWordsCounted_1 = str.match(badWordsVocabulary.vocabulary_1);
+    if(badWordsCounted_1 === null) {
+        badWordsCounted_1 = [];
+    }
+    
+    return badWordsCounted_1.length
+};
+
+// const countBadWords = (str) => { // считаем все негативные слова в тексте
+//     const badWords = {
+// 		counted_1: null,
+// 	  };
 	
-	const result = Object.entries(badWords).map(([key, value], idx) => [
-		key,
-		str.match(badWordsVocabulary[`vocabulary_${idx + 1}`]) === null
-		  ? 0
-		  : str.match(badWordsVocabulary[`vocabulary_${idx + 1}`]).length,
-	]);
+// 	const result = Object.entries(badWords).map(([key, value], idx) => [
+// 		key,
+// 		str.match(badWordsVocabulary[`vocabulary_${idx + 1}`]) === null
+// 		  ? 0
+// 		  : str.match(badWordsVocabulary[`vocabulary_${idx + 1}`]).length,
+// 	]);
 	
-	const arrayOfLengths = Object.values(Object.fromEntries(result));
-	return arrayOfLengths.reduce((a, b) => a + b, 0);
-}
+// 	const arrayOfLengths = Object.values(Object.fromEntries(result));
+// 	return arrayOfLengths.reduce((a, b) => a + b, 0);
+// }
 
 const countStopWords = (str) => {
 	const stopWords = {
