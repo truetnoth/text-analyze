@@ -10,7 +10,7 @@ take_result.addEventListener("click", () => {
     const good_Words = countWords(targetText.value, goodWordsVocabulary);
     const stop_Words = countWords(targetText.value, stopWordsVocabulary);
     const all_Wo_Stop_Words = all_Words.length - stop_Words;
-    const ton = ((good_Words - bad_Words) * 100) / all_Wo_Stop_Words;
+    const ton = ((good_Words - bad_Words) * 100) / all_Words;
 
     allWords.innerText = all_Words.length;
     badWords.innerText = bad_Words;
