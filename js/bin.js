@@ -11,7 +11,7 @@ const tonPlaceNumber = document.querySelector(".ton-number");
 const take_result = document.querySelector(".take_result");
 
 const countAllWords = (str) => { //считаем все слова в тексте
-    return str.trim().match(/\b\S+\b/gi);
+    return str.trim().match(/\b\S+[^0-9]\b/gi);
 };
 
 const countWords = (str, vocabulary) => {
