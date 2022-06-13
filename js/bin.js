@@ -14,14 +14,14 @@ const countAllWords = (str) => { //считаем все слова в текс�
     return str.trim().match(/\b\S+[^0-9]\b/gi);
 };
 
-const countWords = (str, vocabulary) => {
+const countWords = (text, vocabulary) => {
 	const segments = Object.keys(vocabulary);
 	const helperObject = segments.reduce((acc, value, idx) => ({...acc, [`counted_${idx + 1}`]: null}), {}) 
 	const result = Object.keys(helperObject).map((key, idx) => [
 		key,
-		str.match(vocabulary[`vocabulary_${idx + 1}`]) === null
+		text.match(vocabulary[`vocabulary_${idx + 1}`]) === null
 		? 0
-		: str.match(vocabulary[`vocabulary_${idx + 1}`]).length,
+		: text.match(vocabulary[`vocabulary_${idx + 1}`]).length,
 	]);
 
 	const arrayOfLengths = Object.values(Object.fromEntries(result));
