@@ -3,8 +3,6 @@ const targetText = document.querySelector(".text");
 const allWords = document.querySelector(".all-words");
 const badWords = document.querySelector(".bad-words");
 const goodWords = document.querySelector(".good-words");
-const stopWords = document.querySelector(".stop-words");
-const allWoStopWords = document.querySelector(".all-wo-stop-words");
 const tonPlace = document.querySelector(".ton");
 const tonPlaceNumber = document.querySelector(".ton-number");
 

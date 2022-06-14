@@ -8,15 +8,11 @@ take_result.addEventListener("click", () => {
     const all_Words = countAllWords(targetText.value).length;
     const bad_Words = countWords(targetText.value, badWordsVocabulary);
     const good_Words = countWords(targetText.value, goodWordsVocabulary);
-    const stop_Words = countWords(targetText.value, stopWordsVocabulary);
-    const all_Wo_Stop_Words = all_Words - stop_Words;
     const ton = ((good_Words - bad_Words) * 100) / all_Words;
 
     allWords.innerText = all_Words;
     badWords.innerText = bad_Words;
     goodWords.innerText = good_Words;
-    stopWords.innerText = stop_Words;
-    allWoStopWords.innerText = all_Wo_Stop_Words;
     tonPlaceNumber.innerText = "(" + (Math.round(ton * 100) / 100).toFixed(2) + ")";
 
     if (ton > 0) {
