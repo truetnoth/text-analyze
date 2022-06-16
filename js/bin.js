@@ -10,8 +10,8 @@ const take_result = document.querySelector(".take_result");
 
 const countAllWords = (text) => { //считаем все слова в тексте
 	return _.words(text)
-		.filter(word => isNaN(word) ? true : false)
-		.filter(word => word.length < 2 ? false : true)
+		.filter(word => isNaN(word))
+		.filter(word => word.length >= 2)
 		.length;
 };
 
