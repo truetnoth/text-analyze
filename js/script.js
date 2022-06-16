@@ -5,7 +5,7 @@ take_result.addEventListener("click", () => {
     take_result.innerText = "👍🏻";
     setTimeout(back, 1000);
 
-    const all_Words = countAllWords(targetText.value).length;
+    const all_Words = countAllWords(targetText.value);
     const bad_Words = countWords(targetText.value, badWordsVocabulary);
     const good_Words = countWords(targetText.value, goodWordsVocabulary);
     const ton = ((good_Words - bad_Words) * 100) / all_Words;
