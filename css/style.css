@@ -1,7 +1,8 @@
 body {
+  width: 80%;
   display: flex;
   flex-direction: row;
-  padding: 40px 50px;
+  margin: 30px auto;
 }
 
 a {
@@ -18,7 +19,6 @@ header, main, section, footer {
 }
 
 aside {
-  width: 40%;
   height: 100px;
   margin-left: 50px;
 }
@@ -26,10 +26,6 @@ aside p {
   font-family: sans-serif;
   font-size: 18px;
   padding-top: 10px;
-}
-
-strong {
-  font-weight: bold;
 }
 
 header h2 {
@@ -75,15 +71,6 @@ textarea {
   padding-top: 10px;
 }
 
-.instruction_container ul li {
-  padding: 5px 0;
-}
-
-.platform_chooser {
-  font-size: 24px;
-  margin: 15px 0;
-}
-
 .take_result {
   display: block;
   width: 280px;
@@ -103,73 +90,6 @@ textarea {
     color: red;
     cursor: pointer;
   }
-
-.platform_chooser label {
-  padding-top: 3px;
-}
-
-.warning {
-  background-color: rgb(255, 131, 131);
-  color: white;
-}
-
-.inputfile {
-	width: 0.1px;
-	height: 0.1px;
-	opacity: 0;
-	overflow: hidden;
-	position: absolute;
-	z-index: -1;
-}
-
-.inputfile + label {
-  font-size: 22px;
-  font-weight: 700;
-  color: black;
-  background-color: #00f1d8;
-  display: inline-block;
-  padding: 10px 20px;
-  border-radius: 5px;
-  font-family: sans-serif;
-  outline: none;
-}
-
-.inputfile:focus + label,
-.inputfile + label:hover {
-  color: red;
-}
-
-.inputfile + label {
-	cursor: pointer;
-}
-
-.instruction_button {
-  border: none;
-  background-color: white;
-  outline: none;
-  cursor: pointer;
-  font-size: 24px;
-  font-weight: 700;
-  font-family: sans-serif;
-  margin-top: 50px;
-  padding: 0;
-}
-  .instruction_button:hover {
-    text-decoration: underline;
-  }
-  .arrow {
-    display: inline-block;
-    vertical-align: middle;
-    width: 30px;
-    height: 30px;
-    background-image: url(../img/arrow-down.svg);
-    background-size: cover;
-    background-repeat: no-repeat;
-  }
-
-.instruction_container {
-  display: none;
-}
 
 .mobile {
   display: none;
